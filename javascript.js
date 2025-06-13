@@ -17,7 +17,21 @@ function getHumanChoice(choice) {
     return choice.toLowerCase();
 }
 
-console.log(getHumanChoice(choice));
-
 humanScore = 0;
 computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "rock" && computerChoice === "scissors"
+        || humanChoice === "paper" && computerChoice === "rock"
+        || humanChoice === "scissors" && computerChoice == "paper"
+    ) {
+        return "Lucky man!";
+    } else {
+        return "You lose!";
+    }
+}
+
+const humanSelection = getHumanChoice(choice);
+const computerSelection = getComputerChoice();
+
+console.log(playRound(humanSelection, computerSelection));
