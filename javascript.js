@@ -1,4 +1,4 @@
-/* function getComputerChoice() {
+function getComputerChoice() {
     computerGuess = Math.floor(Math.random() * 3);
     if (computerGuess === 1) {
         return "rock";
@@ -10,12 +10,14 @@
         return "scissors";
     }
 }
-*/
 
 let choice = prompt("What's your choice?");
 
 function getHumanChoice(choice) {
-    return choice;
+    return choice.toLowerCase();
 }
 
 console.log(getHumanChoice(choice));
+
+humanScore = 0;
+computerScore = 0;
