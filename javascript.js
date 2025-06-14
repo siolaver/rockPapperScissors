@@ -11,9 +11,8 @@ function getComputerChoice() {
     }
 }
 
-let choice = prompt("What's your choice?");
-
-function getHumanChoice(choice) {
+function getHumanChoice() {
+    let choice = prompt("What's your choice?");
     return choice.toLowerCase();
 }
 
@@ -31,7 +30,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice(choice);
+const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 console.log(playRound(humanSelection, computerSelection));
