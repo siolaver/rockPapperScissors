@@ -12,7 +12,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("What's your choice?");
+    let choice = prompt("What's your choice? (rock, paper, scissors)");
     return choice.toLowerCase();
 }
 
@@ -24,7 +24,7 @@ function playGame() {
     function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "scissors"
         || humanChoice === "paper" && computerChoice === "rock"
-        || humanChoice === "scissors" && computerChoice == "paper"
+        || humanChoice === "scissors" && computerChoice === "paper"
     ) {
         return humanScore++;
     } else {
