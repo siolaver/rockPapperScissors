@@ -16,21 +16,38 @@ function getHumanChoice() {
     return choice.toLowerCase();
 }
 
-humanScore = 0;
-computerScore = 0;
+function playGame() {
 
-function playRound(humanChoice, computerChoice) {
+    humanScore = 0;
+    computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "scissors"
         || humanChoice === "paper" && computerChoice === "rock"
         || humanChoice === "scissors" && computerChoice == "paper"
     ) {
-        return "Lucky man!";
+        return humanScore++;
     } else {
-        return "You lose!";
+        return computerScore++;
     }
+    }
+
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+
+    if (humanScore > computerScore) {
+        return `You're a winner! 
+        Your score: ${humanScore}
+        Computer's score: ${computerScore}`;
+    } else {
+        return `You lose!
+        Your score: ${humanScore}
+        Computer's score: ${computerScore}`;
+    }
+
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-console.log(playRound(humanSelection, computerSelection));
+console.log(playGame());
