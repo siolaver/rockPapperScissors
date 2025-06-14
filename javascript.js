@@ -37,8 +37,13 @@ function playGame() {
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
-
-    if (humanScore > computerScore) {
+    
+    if (humanScore === computerScore){
+        return `Draw! 
+        Your score: ${humanScore}
+        Computer's score: ${computerScore}`;
+    }
+    else if (humanScore > computerScore) {
         return `You're a winner! 
         Your score: ${humanScore}
         Computer's score: ${computerScore}`;
