@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
+    <audio class="cat"><source src="./audio/korotkkoe-myaukane-ot-kotenka.mp3"></audio>
+    <audio class="audio"><source src="./audio/zvuk.mp3"></audio>
+    <div class="all">
+        <div class="top">
+            <h2 class="yourScore">Your score: 0</h2>
+            <h2 class="computerScore">Computer score: 0</h2>
+        </div>
+        <div class="center">
+            <h1 class="text">Let's play the game!</h1>
+        </div>
+        <div class="bottom">
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
+        </div>
+    </div>
+    <div class="hidden">
+        <div class="allTwo">
+            <h1 class="textTwo">You win!</h1>
+            <button class="rock" id="play">Play again</button>
+            <img src="/images/cat.webp">
+        </div>
+    </div>
     <script src="javascript.js"></script>
 </body>
 </html>
